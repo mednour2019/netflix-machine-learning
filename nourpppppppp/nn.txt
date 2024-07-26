@@ -1,0 +1,45 @@
+import pandas as pd
+import numpy as np
+import nltk
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+import csv
+from nltk.stem.porter import PorterStemmer
+import pickle
+from sklearn import tree
+from tkinter import * 
+from IPython.core.display import display, HTML
+from IPython.display import IFrame
+
+fenetre = Tk()
+fenetre.title("Welcome To My App")
+fenetre.geometry('700x650')
+fenetre.minsize(700,650)
+fenetre.maxsize(900,650)
+fenetre.config(background='#DEE5ED')
+
+label1 = Label(fenetre, text="Data Mining Project",padx="28", bg="#DEE5ED",pady="6",font=('Helvetica', 18, 'bold'))
+label1.pack()
+
+label2 = Label(fenetre, text="Netflix Movies and TV Shows",bg="#DEE5ED",font=('Helvetica', 18, 'bold'))
+label2.pack()
+
+label3 = Label(fenetre, text="SIDATA",padx="20", pady="6",bg="#DEE5ED",font=('Helvetica', 18, 'bold'))
+label3.pack()
+
+bouton=Button(fenetre, text="QuitApplication",bg="#727481", command=fenetre.destroy,padx="10",pady="6")
+bouton.pack()
+bouton.place(relx = 0.5,rely = 0.5,anchor ='center')
+
+menubar = Menu(fenetre)
+
+
+menubar.add_cascade(label="Démarrer")
+menubar.add_cascade(label="Déscription")
+menubar.add_cascade(label=" Prédiction")
+menubar.add_cascade(label="Idée générale ")
+
+fenetre.config(menu=menubar)
+messagebox.showinfo('Message title', 'Message content')
+fenetre.mainloop()
+
